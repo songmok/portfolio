@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { mainCol_1, mainCol_2 } from "utils/color";
+import { minFontSize } from "utils/font";
 export const GnbCss = styled.div`
   .workWrap {
     width: 100%;
@@ -36,6 +37,7 @@ export const GnbCss = styled.div`
       height: 300px;
       overflow: hidden;
       .swiper-slide {
+        width: 100%;
         height: 100%;
         text-align: center;
         font-size: 18px;
@@ -54,10 +56,19 @@ export const GnbCss = styled.div`
         }
       }
     }
-    .prev {
-      width: 100px;
-      height: 100px;
-      background-color: #fff;
+    .swiperButton {
+      position: relative;
+      margin: 0 auto;
+      width: 50.2%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        button {
+          ${minFontSize}
+        }
+      }
     }
   }
 `;

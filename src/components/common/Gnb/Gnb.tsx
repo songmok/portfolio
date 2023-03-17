@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation, Keyboard } from "swiper";
-
+import { Button } from "utils/repeat";
 type Props = {};
 
 const Gnb = () => {
@@ -22,6 +22,14 @@ const Gnb = () => {
     swiperRef.slideTo(i - 1, 300);
   };
 
+  const navigateNext = () => {
+    swiperRef.slideNext();
+  };
+
+  const navigatePrev = () => {
+    swiperRef.slidePrev();
+  };
+
   return (
     <>
       <GnbCss>
@@ -29,6 +37,11 @@ const Gnb = () => {
           <div className="work">
             <span>작 업 물</span>
           </div>
+          <Button>
+            <button className="swiper-button-prev" onClick={navigatePrev}>
+              Prev
+            </button>
+          </Button>
           <Swiper
             pagination={{
               type: "fraction",
@@ -38,7 +51,10 @@ const Gnb = () => {
             spaceBetween={30}
             modules={[Pagination, Keyboard]}
             centeredSlides={true}
-            navigation={true}
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
             onSwiper={setSwiperRef}
             className="mySwiper"
           >
@@ -50,10 +66,15 @@ const Gnb = () => {
             <SwiperSlide>Slide 6</SwiperSlide>
             <SwiperSlide>Slide 7</SwiperSlide>
           </Swiper>
-          {GnbData.map((v, i) => {
-            return (
-              <>
-                <p className="swiperButton">
+          <Button>
+            <button className="swiper-button-next" onClick={navigateNext}>
+              Next
+            </button>
+          </Button>
+          <p className="swiperButton">
+            {GnbData.map((v, i) => {
+              return (
+                <Button key={i}>
                   <button
                     onClick={() => {
                       slideTo(v.id);
@@ -61,10 +82,10 @@ const Gnb = () => {
                   >
                     {v.name}
                   </button>
-                </p>
-              </>
-            );
-          })}
+                </Button>
+              );
+            })}
+          </p>
         </div>
       </GnbCss>
     </>
