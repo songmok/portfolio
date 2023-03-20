@@ -2,11 +2,20 @@ import styled from "@emotion/styled";
 import { mainCol_1, mainCol_2 } from "utils/color";
 import { minFontSize } from "utils/font";
 export const GnbCss = styled.div`
+  padding-top: 100px;
   .workWrap {
+    position: fixed;
     width: 100%;
     height: 450px;
     ${mainCol_2}
     justify-content: center;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 9999;
+    &.show {
+      max-height: 100vh;
+    }
     .work {
       width: 100%;
       height: 70px;
@@ -33,7 +42,7 @@ export const GnbCss = styled.div`
       }
     }
     .swiper {
-      width: 50%;
+      width: 40%;
       height: 300px;
       overflow: hidden;
       .swiper-slide {
@@ -58,17 +67,43 @@ export const GnbCss = styled.div`
     }
     .swiperButton {
       position: relative;
-      margin: 0 auto;
+      margin: 0px auto;
       width: 50.2%;
       height: 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      white-space: nowrap;
       > div {
         button {
+          width: 100px;
           ${minFontSize}
+          display: block;
         }
       }
+    }
+    .arrowBtn {
+      position: absolute;
+      top: 50%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: black;
+      font-size: 6rem;
+      transition: font-size 0.2s ease-out;
+      &:hover {
+        color: white;
+        font-size: 7rem;
+      }
+      &::after {
+        content: "";
+      }
+    }
+    .swiper-button-next {
+      right: 25%;
+    }
+    .swiper-button-prev {
+      left: 25%;
     }
   }
 `;

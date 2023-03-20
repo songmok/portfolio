@@ -1,4 +1,8 @@
 import React, { useRef, useState } from "react";
+// fonntawesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GnbCss } from "./GnbCss";
@@ -9,13 +13,15 @@ import { GnbData } from "./data/GnbData";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 // import required modules
 import { Pagination, Navigation, Keyboard } from "swiper";
 import { Button } from "utils/repeat";
-type Props = {};
 
-const Gnb = () => {
+export interface toggle {
+  showGnb: boolean;
+}
+
+const Gnb = ({ showGnb }: toggle) => {
   const [swiperRef, setSwiperRef] = useState<any>(null);
 
   const slideTo = (i: number) => {
@@ -33,15 +39,16 @@ const Gnb = () => {
   return (
     <>
       <GnbCss>
-        <div className="workWrap">
+        <div className={`workWrap${showGnb ? " show wow fadeIn" : ""}`}>
           <div className="work">
             <span>작 업 물</span>
           </div>
-          <Button>
-            <button className="swiper-button-prev" onClick={navigatePrev}>
-              Prev
-            </button>
-          </Button>
+          <button
+            className="swiper-button-prev arrowBtn"
+            onClick={navigatePrev}
+          >
+            <FontAwesomeIcon icon={faCaretLeft} />
+          </button>
           <Swiper
             pagination={{
               type: "fraction",
@@ -58,19 +65,26 @@ const Gnb = () => {
             onSwiper={setSwiperRef}
             className="mySwiper"
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
+            <SwiperSlide>
+              <Link to="/sutabucks">수타벅스</Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link to="/ggobook">꼬북</Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link to="/methedu">metaedu</Link>
+            </SwiperSlide>
+            <SwiperSlide>추가</SwiperSlide>
+            <SwiperSlide>추가</SwiperSlide>
+            <SwiperSlide>추가</SwiperSlide>
+            <SwiperSlide>추가</SwiperSlide>
           </Swiper>
-          <Button>
-            <button className="swiper-button-next" onClick={navigateNext}>
-              Next
-            </button>
-          </Button>
+          <button
+            className="swiper-button-next arrowBtn"
+            onClick={navigateNext}
+          >
+            <FontAwesomeIcon icon={faCaretRight} />
+          </button>
           <p className="swiperButton">
             {GnbData.map((v, i) => {
               return (

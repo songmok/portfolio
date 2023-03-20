@@ -10,12 +10,26 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sutabucks" element={<FirstWork />} />
-          <Route path="/ggobook" element={<SecondWork />} />
-          <Route path="/sgs" element={<ThirdWork />} />
+          <Route
+            path="/sutabucks"
+            element={
+              <FirstWork headerText={"SUTABUCKS"} headerLink={"/sutabucks"} />
+            }
+          />
+          <Route
+            path="/ggobook"
+            element={
+              <SecondWork headerText={"GGOBOOK"} headerLink={"/GGOBOOK"} />
+            }
+          />
+          <Route
+            path="/methedu"
+            element={
+              <ThirdWork headerText={"METHEDU"} headerLink={"/methedu"} />
+            }
+          />
         </Routes>
         <Footer />
       </Router>

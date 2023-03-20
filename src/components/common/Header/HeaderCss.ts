@@ -1,8 +1,11 @@
 import styled from "@emotion/styled";
 import { mainCol_1 } from "utils/color";
 import { headertitle } from "utils/font";
-export const HeaderCss = styled.div`
-  position: relative;
+export const HeaderCss = styled.header`
+  position: fixed;
+  width: 100%;
+  z-index: 9099999;
+  left: 0;
   .headerWrap {
     width: 100%;
     height: 100px;
@@ -10,19 +13,34 @@ export const HeaderCss = styled.div`
     padding-left: 40px;
     display: flex;
     align-items: center;
+    background-color: #ebfff0;
     > ul {
+      position: relative;
       display: flex;
       align-items: center;
-      height: 60px;
       > li {
-        height: 100%;
+        .line {
+          margin: 0 10px;
+          padding-bottom: 5px;
+          display: block;
+        }
         > a {
-          text-align: center;
-          line-height: 60px;
+          display: block;
           > h1 {
+            display: inline-block;
           }
         }
       }
+    }
+    .gnbBtn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: transparent;
+      border: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
     }
   }
 `;

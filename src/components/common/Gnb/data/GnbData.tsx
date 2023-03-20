@@ -5,15 +5,15 @@ export type GnbDataType = {
 export const GnbData = [
   {
     id: 1,
-    name: "배달 앱 프로그램",
+    name: "SUTABUCK",
   },
   {
     id: 2,
-    name: "독서 일정 관리",
+    name: "GGOBOOK",
   },
   {
     id: 3,
-    name: "학업성적관리",
+    name: "METHEDU",
   },
   {
     id: 4,
