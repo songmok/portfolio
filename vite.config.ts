@@ -8,6 +8,7 @@ export default defineConfig({
   //build 시에 모든 console.log를 제거
   build: {
     minify: "terser",
+    outDir: "public",
     terserOptions: {
       compress: {
         drop_console: true,
