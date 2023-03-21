@@ -8,8 +8,8 @@ export default defineConfig({
   //build 시에 모든 console.log를 제거
   build: {
     minify: "terser",
-    outDir: "dist",
-    assetsDir: 'assets', 
+    outDir: "public/dist",
+    assetsDir: "assets",
     sourcemap: true,
     terserOptions: {
       compress: {
