@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-export const FirstWorkCss = styled.section`
+export const WorkCss = styled.section`
   position: relative;
   display: flex;
   .c1 {

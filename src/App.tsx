@@ -12,18 +12,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/*" element={<Home />} />
-          <Route
-            path="/sutabucks"
-            element={
-              <FirstWork headerText={"SUTABUCKS"} headerLink={"/sutabucks"} />
-            }
-          />
-          <Route
-            path="/ggobook"
-            element={
-              <SecondWork headerText={"GGOBOOK"} headerLink={"/GGOBOOK"} />
-            }
-          />
+          <Route path="/sutabucks" element={<FirstWork />} />
+          <Route path="/ggobook" element={<SecondWork />} />
           <Route
             path="/methedu"
             element={

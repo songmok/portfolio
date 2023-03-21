@@ -1,14 +1,18 @@
 import Header from "components/common/Header/Header";
+import ggobook from "assets/video/ggobook.mp4";
 import React from "react";
-export interface WorkProps {
-  headerText: string;
-  headerLink: string;
-}
-const SecondWork = ({ headerText, headerLink }: WorkProps) => {
+import WorkLayOut from "../WorkLayOut";
+
+const SecondWork = () => {
   return (
-    <div>
-      <Header headerText={headerText} headerLink={headerLink} />
-    </div>
+    <>
+      <WorkLayOut
+        headerText="GGOBOOK"
+        headerLink="ggobook"
+        video={ggobook}
+        project="GGOBOOK"
+      />
+    </>
   );
 };
 
