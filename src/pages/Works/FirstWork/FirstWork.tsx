@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "components/common/Header/Header";
 import { FirstWorkCss } from "./FirstWorkCss";
-
+import sutabucks from "assets/video/sutabucks.mp4";
 export interface WorkProps {
   headerText: string;
   headerLink: string;
@@ -13,13 +13,15 @@ const FirstWork = ({ headerText, headerLink }: WorkProps) => {
       <Header headerText={headerText} headerLink={headerLink} />
       <FirstWorkCss>
         <div className="c1">
-          <div className="video">여기에 영상</div>
+          <video src={sutabucks} className="video" autoPlay></video>
         </div>
         <div className="c2">
-          <li>
-            <span>프로젝트 제목 :</span>
-            <span>SUTABUCKS</span>
-          </li>
+          <ul>
+            <li>
+              <span>프로젝트 제목 :</span>
+              <span>SUTABUCKS</span>
+            </li>
+          </ul>
         </div>
       </FirstWorkCss>
     </>
