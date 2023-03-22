@@ -54,7 +54,7 @@ const Header = ({ showGnb, headerText, headerLink }: HeaderTopProps) => {
                   <span className="line"> ㅡ</span>
                 </li>
                 <li>
-                  <Link to={headerLink}>
+                  <Link to={`/${headerLink}`}>
                     <h1>{headerText}</h1>
                   </Link>
                 </li>

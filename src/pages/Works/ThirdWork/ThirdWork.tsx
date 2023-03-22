@@ -1,14 +1,19 @@
 import Header from "components/common/Header/Header";
 import React from "react";
-export interface WorkProps {
-  headerText: string;
-  headerLink: string;
-}
+import WorkLayOut from "../WorkLayOut";
 
-const ThirdWork = ({ headerText, headerLink }: WorkProps) => {
+const ThirdWork = () => {
   return (
     <>
-      <Header headerText={headerText} headerLink={headerLink} />
+      <WorkLayOut
+        headerText="METHEDU"
+        headerLink="methedu"
+        video={""}
+        project="METHEDU"
+        mainFuntion=""
+        startDate=""
+        endDate=""
+      />
     </>
   );
 };

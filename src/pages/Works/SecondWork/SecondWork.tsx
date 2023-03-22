@@ -11,6 +11,9 @@ const SecondWork = () => {
         headerLink="ggobook"
         video={ggobook}
         project="GGOBOOK"
+        mainFuntion=""
+        startDate=""
+        endDate=""
       />
     </>
   );
