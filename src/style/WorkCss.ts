@@ -30,7 +30,7 @@ export const WorkCss = styled.section`
     > ul {
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 40%;
       transform: translate(-50%, -50%);
       width: 85%;
       height: 65%;

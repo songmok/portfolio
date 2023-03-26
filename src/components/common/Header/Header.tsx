@@ -10,9 +10,10 @@ export interface HeaderTopProps {
   headerText: string;
   headerLink: string;
   showGnb?: boolean;
+  ngnb?: number;
 }
 
-const Header = ({ showGnb, headerText, headerLink }: HeaderTopProps) => {
+const Header = ({ showGnb, headerText, headerLink, ngnb }: HeaderTopProps) => {
   const [showGnbState, setShowGnbState] = useState<boolean>(false);
 
   const toggleGnb = () => {
@@ -32,12 +33,8 @@ const Header = ({ showGnb, headerText, headerLink }: HeaderTopProps) => {
                   </Link>
                 </li>
               </ul>
-              <button className="gnbBtn" onClick={toggleGnb}>
-                <FontAwesomeIcon icon={faAngleDown} />
-              </button>
             </div>
           </HeaderCss>
-          <Gnb showGnb={showGnbState} />
         </>
       )}
       {headerText && (

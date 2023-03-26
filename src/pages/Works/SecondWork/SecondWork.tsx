@@ -19,3 +19,4 @@ const SecondWork = () => {
     </>
   );
 };
+export default SecondWork;

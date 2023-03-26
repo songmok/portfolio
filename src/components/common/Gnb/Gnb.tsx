@@ -7,8 +7,7 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GnbCss } from "./GnbCss";
 import { Link } from "react-router-dom";
-import type { GnbDataType } from "./data/GnbData";
-import { GnbData } from "./data/GnbData";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,6 +15,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation, Keyboard } from "swiper";
 import { Button } from "utils/repeat";
+import { GnbData } from "assets/data/GnbData";
 
 export interface toggle {
   showGnb: boolean;
