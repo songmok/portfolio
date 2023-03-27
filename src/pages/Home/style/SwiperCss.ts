@@ -5,13 +5,15 @@ export const SwiperCss = styled.div`
   position: relative;
   background-color: #92e0eb;
   padding-top: 100px;
+  height: 80vh;
+  display: grid;
+
   .work {
     width: 100%;
-    height: 10vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    padding-top: 30px;
     span {
       position: relative;
       font-size: 3.3rem;
@@ -31,8 +33,8 @@ export const SwiperCss = styled.div`
     }
   }
   .swiper {
-    width: 27.7%;
-    height: 300px;
+    width: 37%;
+    height: 500px;
     overflow: hidden;
     .swiper-slide {
       width: 100%;
@@ -43,14 +45,13 @@ export const SwiperCss = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      a {
+      > a {
         display: block;
         width: 100%;
         height: 100%;
         display: flex;
-        video {
+        > img {
           width: 100%;
-          height: 100%;
           display: block;
         }
       }
@@ -60,16 +61,19 @@ export const SwiperCss = styled.div`
     position: relative;
     margin: 0px auto;
     width: 40%;
-    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
     > div {
       button {
-        width: 100px;
         ${minFontSize}
         display: block;
+        &.active {
+          border: 1px solid #007acc;
+          background-color: #007acc;
+          color: #fff;
+        }
       }
     }
   }

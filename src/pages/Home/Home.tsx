@@ -18,12 +18,12 @@ import { HomeCss } from "./style/HomeCss";
 import Header from "components/common/Header/Header";
 import { SwiperCss } from "./style/SwiperCss";
 import { ReplitCss } from "./style/ReplitCss";
-import sutabucks from "assets/video/sutabucks.mp4";
-import { ReplitData } from "assets/data/ReplitData";
+import pullpage1 from "assets/images/project/pullpage1.png";
 type Props = {};
 
 const Home = (props: Props) => {
   const [swiperRef, setSwiperRef] = useState<any>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const slideTo = (i: number) => {
     swiperRef.slideTo(i - 1, 300);
@@ -35,6 +35,10 @@ const Home = (props: Props) => {
 
   const navigatePrev = () => {
     swiperRef.slidePrev();
+  };
+
+  const handleSlideChange = (swiper: any) => {
+    setActiveIndex(swiper.realIndex);
   };
 
   return (
@@ -52,24 +56,21 @@ const Home = (props: Props) => {
             <FontAwesomeIcon icon={faCaretLeft} />
           </button>
           <Swiper
-            pagination={{
-              type: "fraction",
-            }}
             keyboard={true}
             slidesPerView={1}
-            spaceBetween={30}
             modules={[Pagination, Keyboard]}
-            centeredSlides={true}
             navigation={{
               prevEl: ".swiper-button-prev",
               nextEl: ".swiper-button-next",
             }}
             onSwiper={setSwiperRef}
+            onSlideChange={handleSlideChange}
             className="mySwiper"
+            loop={true}
           >
             <SwiperSlide>
               <Link to="/sutabucks">
-                <video src={sutabucks}></video>
+                <img src={pullpage1} alt="" />
               </Link>
             </SwiperSlide>
             <SwiperSlide>
@@ -94,6 +95,7 @@ const Home = (props: Props) => {
               return (
                 <Button key={i}>
                   <button
+                    className={`${activeIndex === i ? "active" : ""}`}
                     onClick={() => {
                       slideTo(v.id);
                     }}

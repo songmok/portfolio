@@ -16,14 +16,14 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Keyboard } from "swiper";
 import { Button } from "utils/repeat";
 import { GnbData } from "assets/data/GnbData";
-
+import pullpage1 from "assets/images/project/pullpage1.png";
 export interface toggle {
   showGnb: boolean;
 }
 
 const Gnb = ({ showGnb }: toggle) => {
   const [swiperRef, setSwiperRef] = useState<any>(null);
-
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const slideTo = (i: number) => {
     swiperRef.slideTo(i - 1, 300);
   };
@@ -35,7 +35,9 @@ const Gnb = ({ showGnb }: toggle) => {
   const navigatePrev = () => {
     swiperRef.slidePrev();
   };
-
+  const handleSlideChange = (swiper: any) => {
+    setActiveIndex(swiper.realIndex);
+  };
   return (
     <>
       <GnbCss>
@@ -63,10 +65,14 @@ const Gnb = ({ showGnb }: toggle) => {
               nextEl: ".swiper-button-next",
             }}
             onSwiper={setSwiperRef}
+            onSlideChange={handleSlideChange}
+            loop={true}
             className="mySwiper"
           >
             <SwiperSlide>
-              <Link to="/sutabucks">수타벅스</Link>
+              <Link to="/sutabucks">
+                <img src={pullpage1} alt="" />
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
               <Link to="/ggobook">꼬북</Link>
@@ -90,6 +96,7 @@ const Gnb = ({ showGnb }: toggle) => {
               return (
                 <Button key={i}>
                   <button
+                    className={`${activeIndex === i ? "active" : ""}`}
                     onClick={() => {
                       slideTo(v.id);
                     }}

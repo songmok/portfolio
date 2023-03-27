@@ -42,7 +42,7 @@ export const GnbCss = styled.div`
       }
     }
     .swiper {
-      width: 40%;
+      width: 24%;
       height: 300px;
       overflow: hidden;
       .swiper-slide {
@@ -59,7 +59,8 @@ export const GnbCss = styled.div`
           width: 100%;
           height: 100%;
           display: flex;
-          span {
+          > img {
+            width: 100%;
             display: block;
           }
         }
@@ -68,7 +69,7 @@ export const GnbCss = styled.div`
     .swiperButton {
       position: relative;
       margin: 0px auto;
-      width: 50.2%;
+      width: 40%;
       height: 80px;
       display: flex;
       justify-content: space-between;
@@ -79,6 +80,11 @@ export const GnbCss = styled.div`
           width: 100px;
           ${minFontSize}
           display: block;
+          &.active {
+            border: 1px solid #007acc;
+            background-color: #007acc;
+            color: #fff;
+          }
         }
       }
     }
@@ -100,10 +106,10 @@ export const GnbCss = styled.div`
       }
     }
     .swiper-button-next {
-      right: 25%;
+      right: 30%;
     }
     .swiper-button-prev {
-      left: 25%;
+      left: 30%;
     }
   }
 `;
