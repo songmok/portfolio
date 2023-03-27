@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../components/common/Header/Header";
 import react from "../../assets/images/stacks/react.png";
 import hjc from "../../assets/images/stacks/htmljscss.png";
