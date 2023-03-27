@@ -1,7 +1,4 @@
-import React from "react";
-import Header from "components/common/Header/Header";
-import sutabucks from "assets/video/sutabucks.mp4";
-import { WorkCss } from "style/WorkCss";
+import sutabucks from "../../../assets/video/sutabucks.mp4";
 import WorkLayOut from "../WorkLayOut";
 
 const FirstWork = () => {

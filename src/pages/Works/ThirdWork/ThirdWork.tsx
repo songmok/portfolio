@@ -1,5 +1,3 @@
-import Header from "components/common/Header/Header";
-import React from "react";
 import WorkLayOut from "../WorkLayOut";
 
 const ThirdWork = () => {

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { mainCol_1, mainCol_2 } from "utils/color";
-import { minFontSize } from "utils/font";
+import { mainCol_1, mainCol_2 } from "../../../utils/color";
+import { minFontSize } from "../../../utils/font";
 export const GnbCss = styled.div`
   padding-top: 100px;
   .workWrap {

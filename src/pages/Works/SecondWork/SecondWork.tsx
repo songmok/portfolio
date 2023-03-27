@@ -1,6 +1,4 @@
-import Header from "components/common/Header/Header";
-import ggobook from "assets/video/ggobook.mp4";
-import React from "react";
+import ggobook from "../../../assets/video/ggobook.mp4";
 import WorkLayOut from "../WorkLayOut";
 
 const SecondWork = () => {

@@ -1,16 +1,16 @@
 import React from "react";
-import Header from "components/common/Header/Header";
-import react from "assets/images/stacks/react.png";
-import hjc from "assets/images/stacks/htmljscss.png";
-import figma from "assets/images/stacks/figma.png";
-import redux from "assets/images/stacks/redux.png";
-import cssinjs from "assets/images/stacks/styled-component.png";
-import scss from "assets/images/stacks/scss.png";
-import slack from "assets/images/stacks/slack.png";
-import notion from "assets/images/stacks/notion.png";
-import github from "assets/images/stacks/github.png";
+import Header from "../../components/common/Header/Header";
+import react from "../../assets/images/stacks/react.png";
+import hjc from "../../assets/images/stacks/htmljscss.png";
+import figma from "../../assets/images/stacks/figma.png";
+import redux from "../../assets/images/stacks/redux.png";
+import cssinjs from "../../assets/images/stacks/styled-component.png";
+import scss from "../../assets/images/stacks/scss.png";
+import slack from "../../assets/images/stacks/slack.png";
+import notion from "../../assets/images/stacks/notion.png";
+import github from "../../assets/images/stacks/github.png";
 
-import { WorkCss } from "style/WorkCss";
+import { WorkCss } from "../../style/WorkCss";
 import { Link } from "react-router-dom";
 
 export interface WorkProps {

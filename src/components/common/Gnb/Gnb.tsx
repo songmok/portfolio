@@ -14,9 +14,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation, Keyboard } from "swiper";
-import { Button } from "utils/repeat";
-import { GnbData } from "assets/data/GnbData";
-import pullpage1 from "assets/images/project/pullpage1.png";
+import { Button } from "../../../utils/repeat";
+import { GnbData } from "../../../assets/data/GnbData";
+import pullpage1 from "../../../assets/images/project/pullpage1.png";
 export interface toggle {
   showGnb: boolean;
 }

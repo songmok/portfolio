@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "pages/Home/Home";
-import FirstWork from "pages/Works/FirstWork/FirstWork";
-import SecondWork from "pages/Works/SecondWork/SecondWork";
-import ThirdWork from "pages/Works/ThirdWork/ThirdWork";
-import Footer from "components/common/Footer/Footer";
-import Study from "pages/Study/Study";
-import About from "components/About/About";
+import Home from "./pages/Home/Home";
+import FirstWork from "./pages/Works/FirstWork/FirstWork";
+import SecondWork from "./pages/Works/SecondWork/SecondWork";
+import ThirdWork from "./pages/Works/ThirdWork/ThirdWork";
+import Footer from "./components/common/Footer/Footer";
+import Study from "./pages/Study/Study";
+import About from "./components/About/About";
 
 function App() {
   return (

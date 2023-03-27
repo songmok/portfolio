@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { mainCol_2 } from "utils/color";
-import { minFontSize } from "utils/font";
+import { minFontSize } from "../../../utils/font";
+
 export const SwiperCss = styled.div`
   position: relative;
   background-color: #92e0eb;

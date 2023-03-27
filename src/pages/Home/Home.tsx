@@ -6,19 +6,19 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import { GnbData } from "assets/data/GnbData";
+import { GnbData } from "../../assets/data/GnbData";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation, Keyboard } from "swiper";
-import { Button } from "utils/repeat";
+import { Button } from "../../utils/repeat";
 import { HomeCss } from "./style/HomeCss";
-import Header from "components/common/Header/Header";
+import Header from "../../components/common/Header/Header";
 import { SwiperCss } from "./style/SwiperCss";
 import { ReplitCss } from "./style/ReplitCss";
-import pullpage1 from "assets/images/project/pullpage1.png";
+import pullpage1 from "../../assets/images/project/pullpage1.png";
 type Props = {};
 
 const Home = (props: Props) => {

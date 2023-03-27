@@ -1,6 +1,5 @@
-import { StudyData } from "assets/data/StudyData";
-import Header from "components/common/Header/Header";
-import React from "react";
+import { StudyData } from "../../assets/data/StudyData";
+import Header from "../../components/common/Header/Header";
 import { Link } from "react-router-dom";
 import { StudyCss } from "./style/StudyCss";
 

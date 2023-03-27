@@ -5,7 +5,7 @@ import {
   minFontSize,
   nanoFontSize,
   standFontSize,
-} from "utils/font";
+} from "../utils/font";
 export const WorkCss = styled.section`
   position: relative;
   display: flex;

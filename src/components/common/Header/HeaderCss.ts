@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { mainCol_1 } from "utils/color";
-import { headertitle } from "utils/font";
+import { mainCol_1 } from "../../../utils/color";
+import { headertitle } from "../../../utils/font";
 export const HeaderCss = styled.header`
   position: fixed;
   width: 100%;
